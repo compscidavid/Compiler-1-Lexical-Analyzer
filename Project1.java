@@ -8,21 +8,13 @@ import java.util.regex.Pattern;
 public class Project1 {
 	public static void main(String[] args) throws Exception {
 		//command line argument for fileName
-		//String fileName = args[0];
-		//File file = new File(fileName);
-		File file = new File("C:\\Users\\David\\eclipse-workspace\\Project1\\src\\test_fn.txt");
+		File file = new File(args[0]);
 		BufferedReader br = new BufferedReader(new FileReader(file));
 		String input;
 		Boolean blockComment = false;
 		// ArrayList to store tokens for Parser in sequential order (token = type of
 		// token and name of token)
-		ArrayList<Token> arrList = new ArrayList<Token>();
-		// KEYWORDS
-		// else if int return void while
-		// SYMBOLS
-		// + - * / < <= > >= == != = ; , ( ) [ ] { } /* */
-		// ESCAPE CHARS
-		// [ ] ( ) { } . * + ? ^ $ \ |
+		//ArrayList<Token> arrList = new ArrayList<Token>();
 
 		// PATTERNS
 		Pattern commentBlockEnd = Pattern.compile("^\\*/");
